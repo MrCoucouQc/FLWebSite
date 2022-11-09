@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 .BG1{
     position: relative;
@@ -17,16 +18,18 @@
 
 nav{
     background: #008000;
-    height: 5rem;
+    height: 3rem;
     width: 100%;
     display: flex;
     position: relative;
     font-family: 'Exo 2', sans-serif;
+    color: white;
 }
 
 .nav-container{
+    position: absolute;
     display: flex;
-    align-items: center;
+    align-self: flex-end;
     width: 100%;
     font-size: 25px;
 }
@@ -51,41 +54,91 @@ nav{
     margin-left: 0.5rem;
 }
 
+/* Sous menu */
+
+.nav-btn > div > .sous-menu{
+    display: none;
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    width: 18rem;
+    top: 2.3rem;
+    background: rgba(92, 92, 92, 0.8);
+    border-bottom: 3px solid #ffa500;
+}
+
+.nav-btn > div:hover .sous-menu{
+    transition: ease-in-out 0.5s;
+    display: block;
+}
+
+.sous-menu > ul > li{
+    padding: 0 0.5rem 0 1rem;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+}
+
+.sous-menu > ul > li:last-child{
+    border-bottom: hidden!important;
+}
+
+.sous-menu > ul > li > a{
+    width: 100%;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    
+}
+
+.sous-menu > ul > li:hover{
+    transition: 0.3s ease-in-out;
+    background: rgba(92, 92, 92, 0.9);
+}
+
+/*  */
+
 .contact{
-    margin-right: 2rem;
+    margin: 0 2rem 0 2rem;
+    align-self: center;
+}
+
+.contact > a{
+    color: #FFFFFF;
+}
+
+.contact:hover a{
+    text-decoration: underline;
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    
     width: fit-content;
     align-items: center;
     justify-content: center;
     height: 60vh;
     width: 100%;
     color: #ffa500;
+    line-height: 6.5rem;
+    font-family: 'Anton', sans-serif
     
 }
 
 .header-txt{
     font-size: 60px;
     color: #ffa500;
-    border: solid 5px black;
-    border-radius: 5px;
-
-    
-    
-    
     
 }
 .bottom-txt{
-
     font-size: 100px;
     color: #FFFFFF;
-    border: solid 5px black;
-    border-radius: 5px;
-    
-
 
 }
+
+.underline{
+    margin: 1rem;
+    height: 0.3rem;
+    width: 25rem;
+    background: #ffa500;
+}
+
+
